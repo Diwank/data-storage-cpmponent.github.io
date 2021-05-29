@@ -1,0 +1,147 @@
+:root{
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+
+
+/* Custom CSS */
+
+
+body{
+     margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Very-Dark-Blue);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content{
+z-index: 1000;
+}
+.content{
+    padding: 20px;
+    background-color: var(--Dark-Blue);
+    vertical-align: bottom;
+    display: inline-block;
+}
+
+.left-content{
+    z-index: 1000;
+    padding: 20px;
+    padding-right: 100px;
+    margin-right: 20px;
+    border-radius: 10px 50px 10px 10px;
+
+}
+
+.action{
+    margin-top: 20px;
+}
+.action-button{
+    background-color: var(--Very-Dark-Blue);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+.right-content{
+    z-index: 1001;
+    border-radius: 10px;
+    width: 445px;
+    color: white;
+    position: relative;
+}
+.usage{
+    font-size: 15px;
+    color: var(--Pale-Blue);
+    opacity: 0.8;
+    
+}
+.currentusage{
+    color: #fff;
+    font-weight: bold;
+}
+
+.background{
+    background-image: url(./images/bg-desktop.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    top: 50vh;
+}
+.usageBAR{
+    background-color: var(--Very-Dark-Blue);
+    width: 450px;
+    height: 14px;
+    border-radius: 1000px;
+    border: 2px solid var(--Very-Dark-Blue);
+    position: relative;
+}
+.usageLIMIT{
+    position: absolute;
+    top: 10px;
+    font-size: 10px;
+    font-weight: 700;
+
+}
+.usageFILL{
+    width: 81.5%;
+    height: 100%;
+    border-radius: 1000px;
+    background: linear-gradient(to right, #ffa399, #ff4d97);
+}
+.usageBALL{
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 2px;
+    right: calc(18.5% + 2px);
+    border-radius: 50%;
+}
+.usage-max-limit{
+    right: 0;
+}
+
+.usageLEFT{
+    position: absolute;
+    right: 20px;
+    top: -50px;
+    background-color: rgb(255, 255, 255);
+    color: var(--Dark-Blue);
+    padding: 15px;
+    border-radius:10px 10px 0 10px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.usageLEFT::before{
+    content: "";
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
